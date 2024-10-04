@@ -16,17 +16,10 @@ function verificarParidad(numero) {
 // Instrucción: Escribe una función que reciba una edad y determine si la persona es:
 // "Menor de edad" (menor a 18), "Adulto" (entre 18 y 65), o "Adulto mayor" (mayor a 65).
 function clasificarEdad(edad) {
-    // Tu código aquí
-    function clasificarEdad(edad) {
-        if(edad<18){
-            console.log("Menor de edad");
-        
-        }else if (edad>= 18 && edad <= 65){
-            console.log("Adulto");
-        }else {
-        console.log("Asulto mayor");
-        }
-    }
+   const clasificarEdad = (edad) =>
+    edad<18?"Menor de edad":
+   edad<=65?"Adulto":
+   "Adulto mayor";  
 }
 
 // Ejercicio 3: Bucles while
