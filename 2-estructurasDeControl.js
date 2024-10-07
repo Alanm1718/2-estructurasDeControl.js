@@ -4,14 +4,11 @@
 // Instrucción: Escribe una función que reciba un número y verifique si es par o impar.
 // Imprime "El número es par" o "El número es impar" según corresponda.
 function verificarParImpar(numero) {
-    if (numero % 2 === 0) {
-        console.log("El número es par");
-    } else {
-        console.log("El número es impar");
-    }
+    console.log(numero % 2 === 0 ? "El número es par" : "El número es impar");
 }
-verificarParImpar(4);  
-verificarParImpar(7);  
+verificarParImpar(4);  // par
+verificarParImpar(7);  // impar
+
 
 
 
