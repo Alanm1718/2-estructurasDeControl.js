@@ -16,23 +16,43 @@ verificarParImpar(7);  // impar
 // Instrucción: Escribe una función que reciba una edad y determine si la persona es:
 // "Menor de edad" (menor a 18), "Adulto" (entre 18 y 65), o "Adulto mayor" (mayor a 65).
 function clasificarEdad(edad) {
-   const clasificarEdad = (edad) =>
-    edad<18?"Menor de edad":
-   edad<=65?"Adulto":
-   "Adulto mayor";  
+    if (edad < 18) {
+        return "Menor de edad";
+    } else if (edad >= 18 && edad <= 65) {
+        return "Adulto";
+    } else {
+        return "Adulto mayor";
+    }
 }
+
+
+console.log(clasificarEdad(17));  
+console.log(clasificarEdad(30)); 
+console.log(clasificarEdad(65));  
+console.log(clasificarEdad(70));  
 
 // Ejercicio 3: Bucles while
 // Instrucción: Crea una función que reciba un número entero positivo y utilice un bucle `while` para imprimir todos los números desde ese número hasta 0.
-function cuentaRegresiva(numero) {
-    // Tu código aquí
-    function cuentaRegresiva(numero){
-        while (numero >=0){
-            console.log(numero);
-            numero--;
-        }
+  function cuentaRegresiva(numero) {
+    // Verificar que el número es entero positivo
+    if (numero < 0 || !Number.isInteger(numero)) {
+        console.log("Por favor, ingresa un número entero positivo.");
+        return;
+    }
+
+    while (numero >= 0) {
+        console.log(numero);
+        numero--;
     }
 }
+
+
+cuentaRegresiva(5);  // Salida: 5, 4, 3, 2, 1, 0
+cuentaRegresiva(3);  // Salida: 3, 2, 1, 0
+cuentaRegresiva(-1); // Salida: Por favor, ingresa un número entero positivo.
+cuentaRegresiva(10); // Salida: 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0
+
+
 
 // Ejercicio 4: Bucles do-while
 // Instrucción: Escribe una función que imprima "Estoy aprendiendo JavaScript" 5 veces utilizando un bucle `do-while`.
